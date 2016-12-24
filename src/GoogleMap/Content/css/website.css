@@ -1,0 +1,100 @@
+﻿html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.body-content {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.navbar-brand {
+    height: auto;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #fff;
+}
+
+    .navbar-inverse .navbar-brand:hover,
+    .navbar-inverse .navbar-brand:focus {
+        color: #9d9d9d;
+        background-color: transparent;
+    }
+
+.textColor-6 {
+    color: rgb(255, 255, 255);
+}
+
+.textSize-16 {
+    font-size: 18px;
+}
+
+.shadyArea-1 {
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.3);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4c000000', endColorstr='#4c000000'); /* IE */
+}
+
+.roundedCorners-5 {
+    border-radius: 5px;
+}
+
+.homePageHeader {
+    font-size: 45px;
+}
+
+.homePageSearchDivider {
+    border-top: 2px solid white;
+    padding-top: 8px;
+}
+
+.homePageSearchAreaTextBox {
+    margin-bottom: 15px;
+}
+
+.nestedGroup input,
+.nestedGroup button {
+    border: none;
+}
+
+    .nestedGroup input:focus {
+        box-shadow: none;
+    }
+
+.btn-lg-1 {
+    padding: 5px 16px;
+    height: 46px;
+    font-size: 26px;
+}
+
+.input-group {
+    margin-bottom: 5px;
+}
+
+    .input-group > .fa {
+        position: absolute;
+        padding: 10px;
+        pointer-events: none;
+        left: 0;
+    }
+
+    .input-group > .left-addon {
+        border: none;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+        background-color: #ffffff;
+    }
+
+    .input-group > #userLocatorButton > .fa {
+        cursor: pointer;
+    }
+
+        .input-group > #userLocatorButton > .fa:hover {
+            color: #ff4629;
+        }
+
+#searchBox {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

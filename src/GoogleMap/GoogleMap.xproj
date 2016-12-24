@@ -7,7 +7,7 @@
 
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>c83980b4-4392-4d72-a1e5-8971c8fc10be</ProjectGuid>
+    <ProjectGuid>08ed229c-073e-4b00-9b1d-a56f212c690d</ProjectGuid>
     <RootNamespace>GoogleMap</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>

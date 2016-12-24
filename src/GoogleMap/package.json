@@ -1,0 +1,37 @@
+{
+  "name": "googlemap",
+  "version": "1.0.0",
+  "description": "GoogleMap project's npm configuration file",
+  "author": "Viet Tran",
+  "dependencies": {
+    "jquery": "latest",
+    "bootstrap": "latest",
+    "font-awesome": "latest"
+  },
+  "devDependencies": {
+    "clean-css": "latest",
+    "imagemin-cli": "latest",
+    "onchange": "latest",
+    "parallelshell": "latest",
+    "rimraf": "latest",
+    "uglify-js": "latest",
+    "npm-run-all": "latest",
+    "copyfiles": "latest"
+  },
+  "scripts": {
+    "clean-all": "rimraf wwwroot/*",
+    "build-dir": "md wwwroot\\css && md wwwroot\\js && md wwwroot\\images && md wwwroot\\fonts",
+    "build-css": "type node_modules\\bootstrap\\dist\\css\\bootstrap.min.css node_modules\\font-awesome\\css\\font-awesome.min.css content\\css\\*.css | cleancss -o wwwroot/css/all-styles.min.css",
+    "build-js": "uglifyjs node_modules/jquery/dist/jquery.min.js node_modules/bootstrap/dist/js/bootstrap.min.js content/js/*.js -o wwwroot/js/all-scripts.min.js -c -m",
+    "build-images": "imagemin content/images/* --out-dir=wwwroot/images",
+    "build-fonts": "copyfiles -f node_modules/font-awesome/fonts/*.* wwwroot/fonts",
+    "watch-css": "onchange \"content/css/*.css\" -- npm run build-css",
+    "watch-js": "onchange \"content/js/*.js\" -- npm run build-js",
+    "watch-images": "onchange \"content/images/*.*\" -- npm run build-images",
+    "watch-fonts": "onchange \"node_modules/font-awesome/fonts/*.*\" -- npm run build-fonts",
+    "watch-all": "npm-run-all -p watch-css watch-js watch-images watch-fonts",
+    "prebuild-all": "npm run clean-all && npm run build-dir",
+    "build-all": "npm run build-css & npm run build-js & npm run build-images & npm run build-fonts",
+    "postinstall": "npm run watch-all"
+  }
+}

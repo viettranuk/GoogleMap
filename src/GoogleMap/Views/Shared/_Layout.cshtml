@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="Google Map">
+    <meta name="author" content="Viet Tran">
+    <title>Google Map Experiments</title>
+    <link rel="stylesheet" href="~/css/all-styles.min.css" />
+</head>
+<body>
+    <section id="header">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Menu</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a asp-controller="Home" asp-action="Index" class="navbar-brand">
+                        <sub>Google Map</sub><br /><b>Experiments</b>
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown active">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a asp-controller="Home" asp-action="Index">Get Current Location</a></li>
+                                <li><a asp-controller="Home" asp-action="Index">Get Nearby Shops</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Customers</a></li>
+                        <li><a href="#">Suppliers</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bodyContent" class="body-content">
+        @RenderBody()
+    </section>
+
+    @*<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>*@
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtZZeisegkAyeBjseuCLDhP0AifxSi7MA" type="text/javascript"></script>
+
+    @*<script type="text/javascript">
+        (function (GoogleMap, $, undefined) {
+            GoogleMap.getRootUrl = function () {
+                var rootUrl = "@Request.ApplicationPath";
+                if (rootUrl == "/") { rootUrl = ""; }
+                return rootUrl;
+            };
+        }(window.GoogleMap = window.GoogleMap || {}, jQuery));
+    </script>*@
+
+    <script type="text/javascript" src="~/js/all-scripts.min.js"></script>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
