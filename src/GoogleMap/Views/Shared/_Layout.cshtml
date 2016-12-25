@@ -26,16 +26,14 @@
                     </a>
                 </div>
                 <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right nav-right-links">
                         <li class="dropdown active">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a asp-controller="Home" asp-action="Index">Get Current Location</a></li>
-                                <li><a asp-controller="Home" asp-action="Index">Get Nearby Shops</a></li>
+                                <li><a asp-controller="Home" asp-action="CurrentLocation">Current Location</a></li>
+                                <li><a asp-controller="Home" asp-action="NearbyShops">Nearby Shops</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Customers</a></li>
-                        <li><a href="#">Suppliers</a></li>
                     </ul>
                 </div>
             </div>

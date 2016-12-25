@@ -4,8 +4,12 @@ namespace GoogleMap.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: /<controller>/
         public IActionResult CurrentLocation()
+        {
+            return View();
+        }
+
+        public IActionResult NearbyShops()
         {
             return View();
         }

@@ -81,7 +81,7 @@
                         infowindow.open(map, marker);
 
                         mapHolder.style.width = $(".homePageSearchAreaTextBox").width() + "px";
-                        mapHolder.style.height = "300px";
+                        mapHolder.style.height = "600px";
                         mapHolder.style.marginBottom = "13px";
                         mapHolder.style.color = "#000000";
                         mapHolder.style.borderRadius = "6px";
