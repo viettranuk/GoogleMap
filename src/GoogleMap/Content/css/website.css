@@ -22,6 +22,17 @@
         background-color: transparent;
     }
 
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > .active > a:hover {
+    border-radius: 6px;
+}
+
+.nav-right-links {
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
 .textColor-6 {
     color: rgb(255, 255, 255);
 }
@@ -97,4 +108,11 @@
 #searchBox {
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+
+    .navbar-right {
+        margin-right: 0; 
+    }
 }
