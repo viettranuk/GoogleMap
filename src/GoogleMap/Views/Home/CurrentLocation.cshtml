@@ -27,9 +27,9 @@
             "use strict";
             var userLocatorButtonSelector = "#userLocatorButton > i.fa";
 
-            $("body").on("mouseover", userLocatorButtonSelector, Common.prototype.setPlaceholderText);
-            $("body").on("mouseout", userLocatorButtonSelector, Common.prototype.resetPlaceholderText);
-            $("body").on("click", userLocatorButtonSelector, Common.prototype.getCurrentLocation);
+            $("body").on("mouseover", userLocatorButtonSelector, CurrentLocation.prototype.setPlaceholderText);
+            $("body").on("mouseout", userLocatorButtonSelector, CurrentLocation.prototype.resetPlaceholderText);
+            $("body").on("click", userLocatorButtonSelector, CurrentLocation.prototype.getCurrentLocation);
         });
 
     </script>

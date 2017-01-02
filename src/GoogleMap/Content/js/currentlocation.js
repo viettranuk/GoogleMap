@@ -1,10 +1,10 @@
-﻿(function (Common, $, undefined) {
+﻿(function (CurrentLocation, $, undefined) {
 
     "use strict";
     var userPostcodeInputSelector = "#userPostcode",
         userLocatorButtonSelector = "#userLocatorButton > i.fa";
 
-    Common.prototype = {
+    CurrentLocation.prototype = {
 
         setPlaceholderText: function () {
 
@@ -20,11 +20,11 @@
 
             if (navigator.geolocation) {
 
-                navigator.geolocation.getCurrentPosition(Common.prototype.getPosition, Common.prototype.getPositionErrorCallback);
+                navigator.geolocation.getCurrentPosition(CurrentLocation.prototype.getPosition, CurrentLocation.prototype.getPositionErrorCallback);
 
             } else {
 
-                alert("Sorry, this function is not currently supported by your browser. Please type in your postcode manually.");
+                alert("Sorry, this function is not currently supported by your browser. Please manually type in your postcode");
             }
         },
 
@@ -123,4 +123,4 @@
         }
     }
 
-}(window.Common = window.Common || {}, jQuery));
+}(window.CurrentLocation = window.CurrentLocation || {}, jQuery));
