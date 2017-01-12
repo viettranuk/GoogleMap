@@ -4,8 +4,7 @@
 }
 
 .body-content {
-    margin-top: 100px;
-    margin-bottom: 100px;
+    background-color: #757575;
 }
 
 .navbar-brand {
@@ -106,7 +105,7 @@
         }
 
 #searchBox {
-    padding-top: 20px;
+    padding-top: 83px;
     padding-bottom: 20px;
 }
 

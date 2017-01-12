@@ -34,18 +34,13 @@
                 myLatitude = position.coords.latitude,
                 myLongtitude = position.coords.longitude,
                 latlng = new google.maps.LatLng(myLatitude, myLongtitude),
-                geocoder = new google.maps.Geocoder(),
                 mapOptions = {
                     zoom: 15,
                     center: latlng,
                     mapTypeId: "roadmap"
-                },
-                map = new google.maps.Map(mapHolder, mapOptions),
-                marker = new google.maps.Marker({
-                    position: latlng,
-                    map: map
-                }),
-                infowindow = new google.maps.InfoWindow();
+                },                
+                infowindow = new google.maps.InfoWindow,
+                geocoder = new google.maps.Geocoder;
 
             geocoder.geocode({ "latLng": latlng }, function (results, status) {
 
@@ -76,15 +71,24 @@
 
                             $(userPostcodeInputSelector).val(myPostcode);
                         }
+                        
+                        var map = new google.maps.Map(mapHolder, mapOptions),
+                            marker = new google.maps.Marker({
+                                position: latlng,
+                                map: map
+                            });
 
                         infowindow.setContent(results[0].formatted_address);
                         infowindow.open(map, marker);
 
-                        mapHolder.style.width = $(".homePageSearchAreaTextBox").width() + "px";
                         mapHolder.style.height = "600px";
-                        mapHolder.style.marginBottom = "13px";
+                        mapHolder.style.marginTop = "13px";
                         mapHolder.style.color = "#000000";
                         mapHolder.style.borderRadius = "6px";
+                        mapHolder.style.border = "2px solid white";
+                        /*mapHolder.style.borderColor = "white";
+                        mapHolder.style.borderStyle = "solid";
+                        mapHolder.style.borderWidth = "2px";*/
 
                         google.maps.event.trigger(map, "resize");
 

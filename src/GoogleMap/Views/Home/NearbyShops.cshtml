@@ -1,10 +1,16 @@
 ﻿
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div id="searchBox" class="col-lg-12 text-center textColor-6 shadyArea-1 roundedCorners-5">
-            <h1 class="homePageHeader">Nearby shops</h1>
+        <div id="searchBox" class="col-lg-12 text-center textColor-6">
+            <h1 class="homePageHeader">nearby shops</h1>
             <p class="textSize-16 homePageSearchDivider">A demo showing how to get postcode-based nearby shops with Google Map APIs</p>
-            <div id="map-canvas"></div>
+            <div id="mapWrapper" style="position:relative">
+                <div id="map-canvas" style="border: 2px solid white"></div>
+                <div id="placeListPanel" class="shadyArea-1" style="position:absolute; height: 100%; width: 30%; top: 0; left: 0; z-index: 13; border-top-left-radius: 6px; border-bottom-left-radius: 6px;">
+                    <br /><br /><br />
+                    <p>Some places here!!</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>

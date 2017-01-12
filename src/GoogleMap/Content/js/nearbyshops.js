@@ -11,7 +11,7 @@
                 mapHolder = document.getElementById("map-canvas");
 
             mapHolder.style.height = "600px";
-            mapHolder.style.marginBottom = "13px";
+            mapHolder.style.marginTop = "13px";
             mapHolder.style.color = "#000000";
             mapHolder.style.borderRadius = "6px";
 
@@ -21,7 +21,7 @@
                 zoom: 15
             });
 
-            infowindow = new google.maps.InfoWindow();
+            infowindow = new google.maps.InfoWindow;
 
             var service = new google.maps.places.PlacesService(map);
 
