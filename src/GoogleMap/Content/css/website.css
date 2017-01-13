@@ -3,6 +3,13 @@
     height: 100%;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none !important;
+}
+
 .body-content {
     background-color: #757575;
 }
@@ -46,6 +53,11 @@
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4c000000', endColorstr='#4c000000'); /* IE */
 }
 
+.shadyArea-2 {
+    color: #ffffff;
+    background-color: rgba(31, 75, 90, 0.3);
+}
+
 .roundedCorners-5 {
     border-radius: 5px;
 }
@@ -55,7 +67,7 @@
 }
 
 .homePageSearchDivider {
-    border-top: 2px solid white;
+    border-top: 1px solid white;
     padding-top: 8px;
 }
 
@@ -109,9 +121,64 @@
     padding-bottom: 20px;
 }
 
+#mapWrapper {
+    overflow: hidden;
+}
+
+#placeListPanel {
+    position: absolute;
+    height: 100%;
+    width: 300px; /* #placeList + #placeListHandler */
+    top: 0;
+    left: 0;
+    z-index: 13;
+    border-radius: 6px 0 0 6px;
+    color: #000000;
+    display: flex;
+    flex-flow: row nowrap; /* default value */
+    align-items: stretch; /* default value */
+}
+
+    #placeListPanel.sidePanelOff {
+        -o-transform: translateX(-277px);
+        -ms-transform: translateX(-277px); /* IE 9 */
+        -webkit-transform: translateX(-277px); /* Safari */
+        transform: translateX(-277px);
+        transition-property: -webkit-transform,transform,opacity;
+        transition-duration: .2s;
+        transition-timing-function: cubic-bezier(0.0,0.0,0.2,1);
+    }
+
+#placeList {
+    flex: 1 1 277px; /* grow-shrink-basis */
+    height: 100%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    background: #fff;
+    border-radius: 6px 0 0 6px;
+}
+
+#placeListHandler {
+    flex: 0 1 23px; /* grow-shrink-basis */
+    padding-top: 50px;
+}
+
+#placeListHandlerButton {
+    padding: 10px 5px !important;
+    border-radius: 0 6px 6px 0 !important;
+    border-color: #ffffff !important;
+    width: 23px; /* same as #placeListHandler */
+}
+
+    #placeListHandlerButton:focus,
+    #placeListHandlerButton:hover,
+    #placeListHandlerButton:active {
+        background-color: #ffffff !important;
+        border-color: #ffffff !important;
+    }
+
 @media (min-width: 768px) {
 
     .navbar-right {
-        margin-right: 0; 
+        margin-right: 0;
     }
 }

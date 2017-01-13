@@ -5,10 +5,22 @@
             <h1 class="homePageHeader">nearby shops</h1>
             <p class="textSize-16 homePageSearchDivider">A demo showing how to get postcode-based nearby shops with Google Map APIs</p>
             <div id="mapWrapper" style="position:relative">
-                <div id="map-canvas" style="border: 2px solid white"></div>
-                <div id="placeListPanel" class="shadyArea-1" style="position:absolute; height: 100%; width: 30%; top: 0; left: 0; z-index: 13; border-top-left-radius: 6px; border-bottom-left-radius: 6px;">
-                    <br /><br /><br />
-                    <p>Some places here!!</p>
+                <div id="map-canvas"></div>
+                <div id="placeListPanel">
+                    <div id="placeList">
+                        <p>Some places here!!</p>
+                        <br />
+                        <p>Some places here!!</p>
+                        <br />
+                        <p>Some places here!!</p>
+                        <br />
+                        <p>Some places here!!</p>
+                    </div>
+                    <div id="placeListHandler">
+                        <button id="placeListHandlerButton" type="button" class="btn btn-default btn-sm" title="Collapse side panel">
+                            <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -22,6 +34,7 @@
         $(document).ready(function () {
 
             NearByShops.prototype.initMap();
+            $("#placeListHandlerButton").on("click", NearByShops.prototype.togglePlaceList);
         });
 
     </script>

@@ -11,12 +11,11 @@
                 mapHolder = document.getElementById("map-canvas");
 
             mapHolder.style.height = "600px";
-            mapHolder.style.marginTop = "13px";
             mapHolder.style.color = "#000000";
             mapHolder.style.borderRadius = "6px";
+            mapHolder.style.border = "2px solid white";
 
-            map = new google.maps.Map(mapHolder,
-            {
+            map = new google.maps.Map(mapHolder, {
                 center: pyrmont,
                 zoom: 15
             });
@@ -25,8 +24,7 @@
 
             var service = new google.maps.places.PlacesService(map);
 
-            service.nearbySearch(
-            {
+            service.nearbySearch({
                 location: pyrmont,
                 radius: 500,
                 type: ["store"]
@@ -47,8 +45,7 @@
         createMarker: function (place) {
 
             var placeLoc = place.geometry.location,
-                marker = new google.maps.Marker(
-                {
+                marker = new google.maps.Marker({
                     map: map,
                     position: placeLoc
                 });
@@ -58,6 +55,24 @@
                 infowindow.setContent(place.name);
                 infowindow.open(map, this);
             });
+        },
+
+        togglePlaceList: function () {
+
+            if ($("#placeListPanel").hasClass("sidePanelOff")) {
+
+                /* Open side panel */
+                $("#placeListPanel").removeClass("sidePanelOff");
+                $("#placeListHandlerButton > i").removeClass("fa-chevron-circle-right");
+                $("#placeListHandlerButton > i").addClass("fa-chevron-circle-left");
+
+            } else {
+
+                /* Close side panel */
+                $("#placeListPanel").addClass("sidePanelOff");
+                $("#placeListHandlerButton > i").removeClass("fa-chevron-circle-left");
+                $("#placeListHandlerButton > i").addClass("fa-chevron-circle-right");
+            }
         }
     }
 

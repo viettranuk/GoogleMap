@@ -86,9 +86,6 @@
                         mapHolder.style.color = "#000000";
                         mapHolder.style.borderRadius = "6px";
                         mapHolder.style.border = "2px solid white";
-                        /*mapHolder.style.borderColor = "white";
-                        mapHolder.style.borderStyle = "solid";
-                        mapHolder.style.borderWidth = "2px";*/
 
                         google.maps.event.trigger(map, "resize");
 
